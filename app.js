@@ -12,8 +12,10 @@ const MongoStore = require('connect-mongo');
 const indexRouter = require('./routes/index');
 
 const app = express();
-// For deployment
+
+// Setup proxy for deployment
 app.set('trust proxy', 1);
+// Cookie config
 app.use(
   session({
     name: 'misteryCookie',

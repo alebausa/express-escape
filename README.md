@@ -1,8 +1,10 @@
-# Welcome to the mistery app 🪄
+# Welcome to Express Escapes - the mistery app  🪄
 
 Uuuuuh welcome welcome welcome, I see you passed the first test... not too bad 😏
 
-Okay so: this repo is the base for your mistery app. ONE member of the team should fork and clone it, and then, start working. You will do pair programming: but that DOESN'T MEAN that only one of you has to do the all the work. All group members will be asked questions about the code, so you all better understand what's going on in the code presented.
+Okay so: this repo is the base for your mistery app. ONE member of the team should fork and clone it, and then, start working. 
+
+> You will be doing pair programming: but that DOESN'T MEAN that only one of you has to do the all the work. All group members will be asked questions about the code, so you all better understand what's going on in the code presented.
 
 ⏳ *Hurry up, you don't have much time*! 
 
@@ -34,7 +36,7 @@ If it is... the challenge beggins.
 
 ### Part 2
 
-- Create a new routes file called <code>routes/secret.js</code>. Remember to import it on the the <code>app.js</code> file for it to work. Create a **protected** route to *localhost:3000/secret*: **only logged in users should be able to see this route**. If a user tries to access this route without being authenticated, the route should redirect to the login page. 
+- Create a new routes file called <code>routes/enigma.js</code>. Remember to import it on the the <code>app.js</code> file for it to work. Create a **protected** route to *localhost:3000/enigmas*: **only logged in users should be able to see this route**. If a user tries to access this route without being authenticated, the route should redirect them to the login page. 
 
 You already have a middleware for this in the <code>middlewares</code> folder. Make sure that the auth route for the login is correct and is the same in your app. If it isn't, write the right route to the login page:
 
@@ -52,10 +54,13 @@ Remember that you can use the middleware this way:
 ```js
 const isLoggedIn = require('../middlewares');
 
-router.get('/secret', isLoggedIn, (req, res, next) => {
+router.get('/enigmas', isLoggedIn, async (req, res, next) => {
   ...
 })
 ```
 
-*Create a user for each member of your team*. When you are finished, come see us for validation to get the NEXT CLUE OF THE CHALLENGE.
+*Create a user for each member of your team*. 
+
+When you are finished, make sure to commit all changes and then come see us for validation and the NEXT CLUE OF THE CHALLENGE.
+
 
