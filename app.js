@@ -10,13 +10,14 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
 const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth');
 
 const app = express();
 // For deployment
 app.set('trust proxy', 1);
 app.use(
   session({
-    name: 'movieApp',
+    name: 'misteryCookie',
     secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: false,
@@ -43,6 +44,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/auth', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
