@@ -55,7 +55,7 @@ Remember that you can use the middleware this way:
 const isLoggedIn = require('../middlewares');
 
 router.get('/enigmas', isLoggedIn, async (req, res, next) => {
-  ...
+  // ...
 })
 ```
 
