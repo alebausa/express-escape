@@ -57,5 +57,5 @@ router.get('/secret', isLoggedIn, (req, res, next) => {
 })
 ```
 
-*Create a user for each member of your team*. When you are finished, come see us for validation and the NEXT CLUE OF THE CHALLENGE.
+*Create a user for each member of your team*. When you are finished, come see us for validation to get the NEXT CLUE OF THE CHALLENGE.
 
