@@ -16,7 +16,7 @@ const app = express();
 app.set('trust proxy', 1);
 app.use(
   session({
-    name: 'movieApp',
+    name: 'misteryCookie',
     secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: false,
