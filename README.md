@@ -20,7 +20,7 @@ Once it's finished, to make sure everything is okay, run:
 npm run dev
 ````
 
-If it is... the challenge beggins.
+If it is... the challenge begins.
 
 ![](https://memegenerator.net/img/instances/80695401/may-the-odds-be-ever-your-favor.jpg)
 
