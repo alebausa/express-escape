@@ -34,6 +34,8 @@ If it is... the challenge begins.
 - Users should be able to signup, login & logout, so you will have to create the routes and views that are necessary for it. When you create the file <code>routes/auth.js</code>, remember to import it on the the <code>app.js</code> file for it to work. 
 - Remember to add links in the navbar of the app to these routes to access them easily.
 
+You already have the packages installed and everything configured in the <code>app.js</code>, you just need to work on the routes & views part of authentication.
+
 ### Part 2
 
 - Create a new routes file called <code>routes/enigma.js</code>. Remember to import it on the the <code>app.js</code> file for it to work. Create a **protected** route to *localhost:3000/enigmas*: **only logged in users should be able to see this route**. If a user tries to access this route without being authenticated, the route should redirect them to the login page. 
@@ -43,6 +45,7 @@ You already have a middleware for this in the <code>middlewares</code> folder. M
 ```js
 module.exports = isLoggedIn = (req, res, next) => {
   if (!req.session.currentUser) {
+    // Change this line with your login route if it is different
     return res.redirect('/auth/login');
   }
   next();
